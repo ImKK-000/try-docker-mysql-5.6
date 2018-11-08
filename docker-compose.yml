@@ -10,3 +10,7 @@ services:
     - ./.data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    logging:
+      driver: json-file
+      options: 
+        max-size: "200k"
